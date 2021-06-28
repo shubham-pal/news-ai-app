@@ -13,20 +13,20 @@ const infoCards = [
   {
     color: '#1565c0',
     title: 'News by Categories',
-    info: 'Business, Entertainment, General, Health, Science, Technology, Gaming',
-    text: 'Give me the latest news'
+    info: 'Business, Entertainment, Sports, General, Health, Science, Technology etc.',
+    text: 'Give me the latest sports news'
   },
   {
     color: '#4527a0',
     title: 'News by Terms',
-    info: 'Windows, Playstation 5, Smartphone etc.',
-    text: 'Give me the latest news'
+    info: 'Windows, Cryptocurrencies, Smartphones etc.',
+    text: 'What\'s up with Smartphones'
   },
   {
     color: '#283593',
     title: 'News by Sources',
-    info: 'CNN, BBC News, Time, ',
-    text: ''
+    info: 'CNN, BBC News, Time, Wired etc.',
+    text: 'Give me the news from CNN'
   },
 ]
 
@@ -36,7 +36,7 @@ const NewsCards = ({ articles }) => {
   if (!articles.length) {
     return (
       <Grow in>
-        <Grid className={classes.container} container alignItems="stretch" spacing={3}>
+        <Grid className={ classes.container } container alignItems="stretch" spacing={3}>
           {infoCards.map((infoCard) => (
             <Grid item xs={12} sm={6} md={4} lg={3} className={ classes.infoCard }>
               <div className={ classes.card } style={{ backgroundColor: infoCard.color }}>
@@ -59,10 +59,10 @@ const NewsCards = ({ articles }) => {
 
   return (
     <Grow in>
-      <Grid className={classes.container} container alignItems="stretch" spacing={3}>
+      <Grid className={ classes.container } container alignItems="stretch" spacing={3}>
         {articles.map((article, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} style={{ display: 'flex' }}>
-            <NewsCard article={article} index={index} />
+            <NewsCard article={ article } index={ index } />
           </Grid>
         ))}
       </Grid>

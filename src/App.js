@@ -10,6 +10,10 @@ const App = () => {
   const [newsArticles, setNewsArticles] = useState([])
 
   useEffect(() => {
+      document.title = "News AI"
+  }, []);
+
+  useEffect(() => {
     alanBtn({
       key: alanKey,
       onCommand: ({ command, articles }) => {
